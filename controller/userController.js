@@ -17,7 +17,7 @@ const update = async (req, res) => {
             const users = await User.findByIdAndUpdate(req.params.id, {
                 $set: req.body,
             });
-            response.success(res, "Account has been updated");
+            response.success(res, {"message":"Account has been updated",users });
         } catch (error) {
             response.error(res, error, 500);
         }
