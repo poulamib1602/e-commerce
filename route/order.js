@@ -19,6 +19,6 @@ router.get("/", verifyTokenAndAdmin, orderController.allOrders);
 
 // GET MONTHLY invest os a user
 
-// router.get("/invest", verifyTokenAndAdmin, orderController.userMonthlyInvest);
+router.get("/invest", verifyTokenAndAdmin, orderController.userMonthlyInvest);
 
 module.exports = router;
